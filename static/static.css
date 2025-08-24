@@ -1,0 +1,132 @@
+/* ===== Background & base ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #e8f0ff;
+  background:
+    radial-gradient(1200px 900px at 10% -10%, rgba(110,231,183,.08), transparent 60%),
+    radial-gradient(1000px 800px at 110% 10%, rgba(34,211,238,.08), transparent 60%),
+    linear-gradient(120deg, #0b1220 0%, #0d1426 50%, #0b1326 100%);
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
+}
+
+/* ===== Layout ===== */
+.chat { margin-top: auto; margin-bottom: auto; }
+
+.card{
+  height: 560px;
+  border-radius: 18px !important;
+  background: linear-gradient(180deg, rgba(20,32,54,.92), rgba(17,26,45,.88)) !important;
+  border: 1px solid rgba(255,255,255,.06) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  overflow: hidden;
+}
+
+.msg_card_body{
+  overflow-y: auto;
+  padding: 14px 14px 22px;
+  scroll-behavior: smooth;
+}
+
+/* nicer scrollbar */
+.msg_card_body::-webkit-scrollbar{ width: 10px; }
+.msg_card_body::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.15); border-radius: 8px; }
+.msg_card_body::-webkit-scrollbar-track{ background: transparent; }
+
+/* ===== Header & footer ===== */
+.card-header{
+  border-radius: 18px 18px 0 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,.06) !important;
+  background: linear-gradient(180deg, rgba(14,22,39,.95), rgba(14,22,39,.75)) !important;
+  padding: 12px 16px;
+}
+.card-footer{
+  border-radius: 0 0 18px 18px !important;
+  border-top: 1px solid rgba(255,255,255,.06) !important;
+  background: linear-gradient(180deg, rgba(14,22,39,.9), rgba(14,22,39,.8)) !important;
+  padding: 12px;
+}
+
+/* ===== Header content ===== */
+.user_info{ margin: auto 0 auto 14px; }
+.user_info span{ font-size: 18px; color: #fff; font-weight: 600; }
+.user_info p{ font-size: 12px; color: rgba(255,255,255,.65); margin: 2px 0 0; }
+
+.online_icon{
+  position: absolute;
+  height: 10px; width: 10px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  bottom: -2px; right: -2px;
+  border: 1.5px solid white;
+}
+
+/* ===== Message avatars ===== */
+.img_cont_msg{ height: 36px; width: 36px; display:flex; align-items:center; justify-content:center; }
+.user_img_msg{
+  height: 32px; width: 32px;
+  border:1.5px solid #f5f6fa; border-radius:50%;
+  object-fit:cover; object-position:center; display:block;
+}
+
+/* ===== Inputs & buttons ===== */
+.type_msg{
+  background: #0f1628 !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+  color: #e8f0ff !important;
+  height: 56px !important;
+  border-radius: 12px 0 0 12px !important;
+  padding: 0 14px;
+  box-shadow: inset 0 0 0 1px rgba(34,211,238,.06);
+}
+.type_msg::placeholder{ color: rgba(255,255,255,.55); }
+.type_msg:focus{ box-shadow: 0 0 0 2px rgba(34,211,238,.18) !important; outline: 0 !important; }
+
+.send_btn{
+  border-radius: 0 12px 12px 0 !important;
+  background: linear-gradient(135deg, #22d3ee, #6ee7b7) !important;
+  border: 0 !important;
+  color: #052228 !important;
+  cursor: pointer;
+  padding: 0 16px;
+  box-shadow: 0 12px 26px rgba(34,211,238,.25);
+}
+.send_btn:active{ transform: translateY(1px); }
+
+/* ===== Bubbles ===== */
+.msg_cotainer{
+  margin: auto 0 auto 10px;
+  border-radius: 16px;
+  background-color: #4aa3ff;
+  color: #061527;
+  padding: 12px 14px;
+  position: relative;
+  max-width: 80%;
+  line-height: 1.55;
+  word-break: break-word;
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+}
+.msg_cotainer_send{
+  margin: auto 10px auto 0;
+  border-radius: 16px;
+  background-color: #58cc71;
+  color: #062011;
+  padding: 12px 14px;
+  position: relative;
+  max-width: 80%;
+  line-height: 1.55;
+  word-break: break-word;
+  box-shadow: 0 10px 24px rgba(0,0,0,.22);
+}
+
+/* ===== Misc ===== */
+.contacts_body{ padding: .75rem 0 !important; overflow-y: auto; white-space: nowrap; }
+.contacts{ list-style: none; padding: 0; }
+.contacts li{ width: 100% !important; padding: 5px 10px; margin-bottom: 15px !important; }
+.active{ background-color: rgba(255,255,255,.05); }
+
+.search, .attach_btn, .search_btn{
+  border-radius: 12px !important;
+  background-color: rgba(0,0,0,.3) !important;
+  border: 0 !important; color: white !important; cursor: pointer;
+}
